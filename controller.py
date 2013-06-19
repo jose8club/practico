@@ -5,7 +5,10 @@ import sqlite3
 #from form import Ui_Dialog
 #import view_form
 
-
+def conectar():
+    con = sqlite3.connect('alumnos.db')
+    con.row_factory = sqlite3.Row
+    return con
 
 def obtener_alumnos():
     con = conectar()
